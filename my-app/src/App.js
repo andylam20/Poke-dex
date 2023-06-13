@@ -8,16 +8,17 @@ function App() {
     const getAllPokemons = async () => {
       const res = await fetch(loadMore)
       const data = await res.json()
-  
       setLoadMore(data.next)
 
-      data.results.map(async (pokemon) => {
+      const pokemonDataPromises = data.results.map(async (pokemon) => {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
-        const data = await res.json()
-        setAllPokemon(currentList => [...currentList, data])
+       return res.json()
       })
-    }
 
+      const pokemonData = await Promise.all(pokemonDataPromises)
+      setAllPokemon(currentList => [...currentList, ...pokemonData])
+    }
+    
     const shouldGetAllPokemon = useRef(true)
 
     useEffect(() => {
