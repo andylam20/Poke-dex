@@ -3,7 +3,7 @@ import PokemonThumbnail from "./components/PokemonThumbnail.js"
 
 export default function Pokedex() {
     const [allPokemon, setAllPokemon] = useState([])
-    const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=20')
+    const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=1000')
 
     const getAllPokemons = async () => {
       const res = await fetch(loadMore)
@@ -37,10 +37,6 @@ export default function Pokedex() {
               <PokemonThumbnail
                 key={index}
                 pokemon={pokemon}
-                id={pokemon.id}
-                name={pokemon.name}
-                image={pokemon.sprites.other.dream_world.front_default}
-                type={pokemon.types[0].type.name}
               />
           ))}
           </div>
