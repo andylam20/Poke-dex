@@ -1,7 +1,7 @@
 import {useState, useEffect, useRef} from "react"
 import PokemonThumbnail from "./components/PokemonThumbnail.js"
 
-function App() {
+export default function Pokedex() {
     const [allPokemon, setAllPokemon] = useState([])
     const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=20')
 
@@ -30,12 +30,13 @@ function App() {
 
     return (
       <div className="app-container">
-        <h1>Test</h1>
+        <h1>PokeDex</h1>
         <div className="pokemon-container">
           <div className="all-container">
           {allPokemon.map((pokemon, index) => (
               <PokemonThumbnail
                 key={index}
+                pokemon={pokemon}
                 id={pokemon.id}
                 name={pokemon.name}
                 image={pokemon.sprites.other.dream_world.front_default}
@@ -49,4 +50,3 @@ function App() {
     );
 }
 
-export default App;

@@ -1,0 +1,26 @@
+.pokemon-type-bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:1px;
+    padding: 10px;
+    border-radius: 30% / 100%;
+    border: 2px solid black;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    color: white;
+}
+.thumb-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0 ;
+  margin: 0.3rem;
+  border: 1px solid #efefef;
+  border-radius: 0.2rem;
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.089);
+}
