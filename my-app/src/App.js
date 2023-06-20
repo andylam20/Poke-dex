@@ -3,7 +3,7 @@ import PokemonThumbnail from "./components/PokemonThumbnail.js"
 
 export default function Pokedex() {
     const [allPokemon, setAllPokemon] = useState([])
-    const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=1000')
+    const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
 
     const getAllPokemons = async () => {
       const res = await fetch(loadMore)
@@ -31,6 +31,7 @@ export default function Pokedex() {
     return (
       <div className="app-container">
         <h1>PokeDex</h1>
+        <input class="sticky" type="text" placeholder="Search for Pokemon"/>
         <div className="pokemon-container">
           <div className="all-container">
           {allPokemon.map((pokemon, index) => (
