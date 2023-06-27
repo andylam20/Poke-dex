@@ -71,3 +71,14 @@ h3 {
   min-width: 50%;
   margin-top: 1rem;
 }
+
+input.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 20%;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}

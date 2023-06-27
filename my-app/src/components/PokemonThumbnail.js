@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './PokemonThumbnail.css'
 
-const PokemonThumbnail = ({pokemon, id, name, image, type}) => {
+const PokemonThumbnail = ({pokemon}) => {
     return(
+        <Link to={`/${pokemon.name}`} className="link">
         <div className="thumb-container">
             <div className="number">
                 <p>#0{pokemon.id}</p>
@@ -13,13 +15,14 @@ const PokemonThumbnail = ({pokemon, id, name, image, type}) => {
                 <div className="type-container">
                 {pokemon.types.map((types, index) => (
                     <PokemonType
-                        key={index}
+                    key={index}
                     types={types.type.name}
                     />
                     ))}
                 </div>
             </div>
         </div>
+        </Link>
     )
 }
 
