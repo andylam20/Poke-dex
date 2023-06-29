@@ -42,7 +42,10 @@ export default function Pokedex() {
           ))}
           </div>
         </div>
-        <button className="load-more" onClick={() => getAllPokemons()}>Load More</button>
+        {loadMore ?  
+          <button className="load-more" onClick={() => getAllPokemons()}>Load More</button> 
+          :<></>
+        }
       </div>
     );
 }
