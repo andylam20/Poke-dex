@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin:1px;
+    margin:3px 10px;
     padding: 10px;
     border-radius: 30% / 100%;
     border: 2px solid black;
@@ -23,6 +23,11 @@
   min-width: 160px;
   text-align: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.089);
+}
+
+.thumb-container:hover {
+  background-color: #e1eaf1;
+  transform: scale(1.1);
 }
 
 .link {

@@ -9,13 +9,16 @@ export default function Pokemon() {
         console.log(pokemon.pokemon)
         try {
             const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.pokemon}`)
+            console.log(res)
+            if(res.status === 404) {
+                setPokemonData('fail')
+                return;
+            }
             const data = await res.json()
             console.log(data)
             setPokemonData(data)
         } catch(error) {
-            console.log(error)
         }
-
     }
 
     const shouldGetAllPokemon = useRef(true)
@@ -30,13 +33,19 @@ export default function Pokemon() {
     console.log(pokemonData)
 
     return (
-        <>
-            {pokemonData ?
+    <>
+    {pokemonData === 'fail' ? (
+        <h1>Failed to find Pokemon</h1>
+    ) : (
+        pokemonData ? (
             <>
-            <h1>{pokemonData.name}</h1>
-            <h2>Test</h2>
-            </>: 
-            <h1>Loading . . .</h1>}
-        </>
+                <h1>{pokemonData.name}</h1>
+                <h2>Test</h2>
+            </>
+        ) : (
+            <h1>Loading . . .</h1>
+        )
+    )}
+    </>
     )
 }

@@ -72,13 +72,18 @@ h3 {
   margin-top: 1rem;
 }
 
+.load-more:hover {
+  transform: scale(1.1);
+}
+
 input.sticky {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 20%;
   padding: 5px;
   background-color: #cae8ca;
   border: 2px solid #4CAF50;
+  z-index: 9999;
 }
