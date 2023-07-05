@@ -21,11 +21,11 @@ export default function Pokemon() {
         }
     }
 
-    const shouldGetAllPokemon = useRef(true)
+    const shouldGetPokemon = useRef(true)
 
     useEffect(() => {
-      if(shouldGetAllPokemon.current) {
-        shouldGetAllPokemon.current = false
+      if(shouldGetPokemon.current) {
+        shouldGetPokemon.current = false
         getPokemon(params)
       }
     }, [params])

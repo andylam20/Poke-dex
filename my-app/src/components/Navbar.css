@@ -1,0 +1,31 @@
+
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #cc322a;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.pokemon-title {
+    color: #FFCB05;
+    text-shadow: 0 0 5px blue;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+input.sticky {
+  position: sticky;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+  z-index: 9999;
+}

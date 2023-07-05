@@ -30,8 +30,6 @@ export default function Pokedex() {
 
     return (
       <div className="app-container">
-        <h1>PokeDex</h1>
-        <input className="sticky" type="text" placeholder="Search for Pokemon"/>
         <div className="pokemon-container">
           <div className="all-container">
           {allPokemon.map((pokemon, index) => (

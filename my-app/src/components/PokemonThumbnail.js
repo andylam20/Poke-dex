@@ -6,9 +6,7 @@ const PokemonThumbnail = ({pokemon}) => {
     return(
         <Link to={`/${pokemon.name}`} className="link">
         <div className="thumb-container">
-            <div className="number">
-                <p>#0{pokemon.id}</p>
-            </div>
+            <p>#0{pokemon.id}</p>
             <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name}/>
             <div className="detail-wrapper">
                 <h3>{pokemon.name}</h3>

@@ -11,6 +11,7 @@
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
     color: white;
 }
+
 .thumb-container {
   display: flex;
   flex-direction: column;
@@ -27,7 +28,8 @@
 
 .thumb-container:hover {
   background-color: #e1eaf1;
-  transform: scale(1.1);
+  transform: scaleX(1.1);
+  transform: scaley(1.03);
 }
 
 .link {
