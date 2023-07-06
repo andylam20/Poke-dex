@@ -1,7 +1,7 @@
 
 .navbar-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: sticky;
     top: 0;
     left: 0;

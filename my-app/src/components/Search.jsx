@@ -10,8 +10,13 @@ export default function Search() {
     };
 
     const handleKeyDown = (event) => {
-        if (event.key === 'Enter') {
-            navigate("/" + searchValue)
+        try{
+            if (event.key === 'Enter') {
+                navigate("/" + searchValue)
+            }
+        }
+        catch{
+            console.log("A")
         }
     };
     
