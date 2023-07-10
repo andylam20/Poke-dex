@@ -60,48 +60,42 @@ export default function Pokemon() {
             <div className="chart">
                 <p>Hp</p>
                 <div className="bar" style={{
-                    width: pokemonData.stats[0].base_stat*5,
-                    animation: `barAnimation ${pokemonData.stats[0].base_stat / 100}s ease`}}>
+                    width: pokemonData.stats[0].base_stat*5}}>
                     </div>
                 <p>{pokemonData.stats[0].base_stat}</p>
             </div>
             <div className="chart">
                 <p>Attack</p>
                 <div className="bar" style={{
-                    width: pokemonData.stats[1].base_stat*5,
-                    animation: `barAnimation ${pokemonData.stats[1].base_stat / 100}s ease`}}>
+                    width: pokemonData.stats[1].base_stat*5}}>
                     </div>
                 <p>{pokemonData.stats[1].base_stat}</p>
             </div>
             <div className="chart">
                 <p>Defense</p>
                 <div className="bar" style={{
-                    width: pokemonData.stats[2].base_stat*5,
-                    animation: `barAnimation ${pokemonData.stats[2].base_stat / 100}s ease`}}>
+                    width: pokemonData.stats[2].base_stat*5}}>
                     </div>
                 <p>{pokemonData.stats[2].base_stat}</p>
             </div>
             <div className="chart">
                 <p>Special Attack</p>
                 <div className="bar" style={{
-                    width: pokemonData.stats[3].base_stat*5,
-                    animation: `barAnimation ${pokemonData.stats[3].base_stat / 100}s ease`}}>
+                    width: pokemonData.stats[3].base_stat*5}}>
                     </div>
                 <p>{pokemonData.stats[3].base_stat}</p>
             </div>
             <div className="chart">
                 <p>Special Defense</p>
                 <div className="bar" style={{
-                    width: pokemonData.stats[4].base_stat*5,
-                    animation: `barAnimation ${pokemonData.stats[4].base_stat / 100}s ease`}}>
+                    width: pokemonData.stats[4].base_stat*5}}>
                     </div>
                 <p>{pokemonData.stats[4].base_stat}</p>
             </div>
             <div className="chart">
                 <p>Speed</p>
                 <div className="bar" style={{
-                    width: pokemonData.stats[5].base_stat*5,
-                    animation: `barAnimation ${pokemonData.stats[5].base_stat / 100}s ease`}}>
+                    width: pokemonData.stats[5].base_stat*5}}>
                     </div>
                 <p>{pokemonData.stats[5].base_stat}</p>
             </div>

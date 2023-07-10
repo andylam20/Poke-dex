@@ -70,6 +70,11 @@
   color: #f4abfc;
 }
 
+.stat-page {
+  display: flex;
+  flex-direction: column;
+}
+
 .chart {
   display: flex;
   align-items: center;
@@ -79,15 +84,15 @@
 }
 
 .chart p {
-    margin-right: 10px;
-    width: 100px; /* Adjust the width as needed */
+    margin-right: 100px;
+    width: 10px; /* Adjust the width as needed */
 }
 
 .bar {
     height: 100%;
     background-color: blue;
     border-radius: 10px;
-    animation: barAnimation 1s ease;
+    animation: barAnimation 1.5s ease-in-out;
 }
 
 @keyframes barAnimation {
