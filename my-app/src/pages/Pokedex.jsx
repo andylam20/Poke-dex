@@ -1,31 +1,35 @@
-import {useState, useEffect, useRef} from "react"
+import {useState, useEffect} from "react"
 import PokemonThumbnail from "../components/PokemonThumbnail.js"
 
 export default function Pokedex() {
     const [allPokemon, setAllPokemon] = useState([])
     const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
 
-    const getAllPokemons = async () => {
-      const res = await fetch(loadMore)
-      const data = await res.json()
-      setLoadMore(data.next)
-
-      const pokemonDataPromises = data.results.map(async (pokemon) => {
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
-       return res.json()
-      })
-
-      const pokemonData = await Promise.all(pokemonDataPromises)
-      setAllPokemon(currentList => [...currentList, ...pokemonData])
-    }
+      const getAllPokemons = async () => {
+        try{
+          const res = await fetch(loadMore)
+          const data = await res.json()
+          setLoadMore(data.next)
     
-    const shouldGetAllPokemon = useRef(true)
+          const pokemonDataPromises = data.results.map(async (pokemon) => {
+            const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
+           return res.json()
+          })
+    
+          const pokemonData = await Promise.all(pokemonDataPromises)
+          setAllPokemon(currentList => [...currentList, ...pokemonData])
+        }
+        catch {
+          console.log("Fail")
+        }
+      }
 
     useEffect(() => {
-      if(shouldGetAllPokemon.current) {
-        shouldGetAllPokemon.current = false
+      const shouldGetAllPokemonFunction = () => {
         getAllPokemons()
       }
+
+      return shouldGetAllPokemonFunction()
     })
 
     return (

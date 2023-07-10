@@ -9,8 +9,8 @@ const PokemonThumbnail = ({pokemon}) => {
             <p>#0{pokemon.id}</p>
             <img src={pokemon.sprites.other.dream_world.front_default} alt={pokemon.name}/>
             <div className="detail-wrapper">
-                <h3>{pokemon.name}</h3>
-                <div className="type-container">
+                <h3>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h3>
+                <div className="type-containers">
                 {pokemon.types.map((types, index) => (
                     <PokemonType
                     key={index}
