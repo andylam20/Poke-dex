@@ -1,73 +1,110 @@
-.fire {
-  color: #cc2f0a;
+.top-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 
-.normal {
-  color: #bdbaaf;
+.left-container h1 {
+  padding-left: 10px;
+  color: #a7b9d3;
+  font-size: 150px;
 }
 
-.water {
-  color: #3490ed;
+.type-container {
+  display: flex;
+  flex-direction: row;
+  width: 140px;
+  height: 30px;
 }
 
-.grass {
-  color: #74bb40;
+.type-container p{
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  width: 90px;
+  border-radius: 5px;
+  margin: 2px;
 }
 
-.electric {
-  color: #fbb720;
+.right-container {
+  padding-left: 200px;
 }
 
-.ice {
-  color: #8fe4fb;
+.stat-page {
+  padding-left: 200px;
 }
 
-.fighting {
-  color: #80351a;
+.type-container .fire {
+  background-color: #cc2f0a;
 }
 
-.poison {
-  color: #954595;
+.type-container .normal {
+  background-color: #bdbaaf;
 }
 
-.ground {
-  color: #d0b656;
+.type-container .water {
+  background-color: #3490ed;
 }
 
-.flying {
-  color: #6a77dd;
+.type-container .grass {
+  background-color: #74bb40;
 }
 
-.psychic {
-  color: #f7407e;
+.type-container .electric {
+  background-color: #fbb720;
 }
 
-.bug {
-  color: #a2b01f;
+.type-container .ice {
+  background-color: #8fe4fb;
 }
 
-.rock {
-  color: #ae9549;
+.type-container .fighting {
+  background-color: #80351a;
 }
 
-.ghost {
-  color: #5d59ac;
+.type-container .poison {
+  background-color: #954595;
 }
 
-.dark {
-  color: #4d392e;
+.type-container .ground {
+  background-color: #d0b656;
 }
 
-.dragon {
-  color: #745edf;
+.type-container .flying {
+  background-color: #6a77dd;
 }
 
-.steel {
-  color: #b6b4be;
+.type-container .psychic {
+  background-color: #f7407e;
 }
 
-.fairy {
-  color: #f4abfc;
+.type-container .bug {
+  background-color: #a2b01f;
+}
+
+.type-container .rock {
+  background-color: #ae9549;
+}
+
+.type-container .ghost {
+  background-color: #5d59ac;
+}
+
+.type-container .dark {
+  background-color: #4d392e;
+}
+
+.type-container .dragon {
+  background-color: #745edf;
+}
+
+.type-container .steel {
+  background-color: #b6b4be;
+}
+
+.type-container .fairy {
+  background-color: #f4abfc;
 }
 
 .stat-page {
@@ -78,14 +115,20 @@
 .chart {
   display: flex;
   align-items: center;
-  width: 800px;
+  width: 1000px;
   height: 30px;
   margin-bottom: 10px;
 }
 
 .chart p {
+<<<<<<< HEAD
     margin-right: 100px;
     width: 10px; /* Adjust the width as needed */
+=======
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 100px; /* Adjust the width as needed */
+>>>>>>> ca2b396db69012d81ba26953e508e14c70ebb917
 }
 
 .bar {
@@ -99,4 +142,10 @@
     0% {
         width: 0;
     }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
