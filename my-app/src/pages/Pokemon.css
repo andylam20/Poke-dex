@@ -2,12 +2,24 @@
   display: flex;
   align-items: center;
   flex-direction: row;
+  width: 100vw;
+}
+
+.left-container {
+  padding-left: 10px;
+  padding-right: 150px;
+}
+
+.inner-container {
+  margin-left: 50px;
 }
 
 .left-container h1 {
-  padding-left: 10px;
+  top: 0;
+  left: 0;
   color: #a7b9d3;
   font-size: 150px;
+  margin: 0px;
 }
 
 .type-container {
@@ -28,11 +40,21 @@
 }
 
 .right-container {
-  padding-left: 200px;
+  padding-left: 150px;
+  padding-right: 150px;
 }
 
 .stat-page {
-  padding-left: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.right-container img {
+  width: 15vw;
+  max-width: 250px;
+  min-width: 100px;
+  height: auto;
+  padding-top: 20px;
 }
 
 .type-container .fire {
@@ -115,20 +137,31 @@
 .chart {
   display: flex;
   align-items: center;
-  width: 1000px;
+  width: 100vw;
   height: 30px;
   margin-bottom: 10px;
 }
 
+.weight {
+  font-size: 16px;
+}
+
+.stat-text {
+  display: flex;
+  left: 25%;
+  padding-top: 10px;
+}
+
 .chart p {
-<<<<<<< HEAD
-    margin-right: 100px;
-    width: 10px; /* Adjust the width as needed */
-=======
     margin-right: 10px;
     margin-left: 10px;
-    width: 100px; /* Adjust the width as needed */
->>>>>>> ca2b396db69012d81ba26953e508e14c70ebb917
+    width: 100px;
+}
+
+.stat h3 {
+  position: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bar {
@@ -148,4 +181,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .top-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+  }
 }

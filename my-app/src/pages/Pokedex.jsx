@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react"
+import {useState, useEffect, useRef} from "react"
 import PokemonThumbnail from "../components/PokemonThumbnail.js"
 
 export default function Pokedex() {
@@ -24,12 +24,13 @@ export default function Pokedex() {
         }
       }
 
+      const isMounted = useRef(true)
+
     useEffect(() => {
-      const shouldGetAllPokemonFunction = () => {
+      if(isMounted.current) {
+       isMounted.current = false 
         getAllPokemons()
       }
-
-      return shouldGetAllPokemonFunction()
     })
 
     return (
