@@ -1,4 +1,4 @@
-# Poke-dex
+# Pokédex
 I wanted to learn the basics of **React**, **jsx** and **CSS**
 
 I utilized the [PokeAPI](https://pokeapi.co/)
